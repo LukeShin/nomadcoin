@@ -1,11 +1,9 @@
 package main
 
 import (
-	"github.com/LukeShin/nomadcoin/explorer"
 	"github.com/LukeShin/nomadcoin/rest"
 )
 
 func main() {
-	go explorer.Start(3000)
-	rest.Start(5000)
+	rest.Start(4000)
 }
