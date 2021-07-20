@@ -23,7 +23,7 @@ func Start() {
 	}
 
 	port := flag.Int("port", 4000, "Set port of the server")
-	mode := flag.String("mode", "rest", "Choose between 'html' and 'rest'")
+	mode := flag.String("mode", "rest", "Choose mode from 'html', 'rest' and 'all'")
 	flag.Parse()
 
 	switch *mode {
