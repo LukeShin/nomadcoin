@@ -75,7 +75,8 @@ func block(rw http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.Atoi(vars["height"])
 	utils.HandleErr(err)
-	block := blockchain.GetBlockchain().GetBlock(id)
+	block, err := blockchain.GetBlockchain().GetBlock(id)
+	utils.HandleErr(err)
 	json.NewEncoder(rw).Encode(block)
 }
 
